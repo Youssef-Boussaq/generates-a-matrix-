@@ -1,0 +1,20 @@
+def matrice(n,p):
+    ma=[]
+    nbr=0
+    for i in range(0,n):
+        line=[]
+        for j in range(0,p):
+            nbr+=1
+            line.append(nbr)
+        ma.append(line)
+    return ma
+n=int(input("write the first number n: "))
+p=int(input("write the first number p: "))
+if n>0 and n<10 and p>0 and p<10: 
+   ma= matrice(n,p)
+else:
+    print("n and p doesn't valid")
+for i in range(1,n,2):
+    ma[i]=ma[i][::-1]
+print(ma)
+    
